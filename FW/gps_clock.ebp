@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="0.40" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="gps_clock" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Option virtualFolders="FreeRTOS\;FreeRTOS\include\;usr\;usr\include\;startup_and_configs\;CMSIS\;SPL\;SPL\include\;CMSIS\include\;Information\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\gps_clock.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-g3" />
+					<Add option="-O0" />
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\gps_clock.elf" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m3" />
+			<Add option="$lscript=./stm32f100c8_flash.ld" />
+			<Add option="$stack=0x2000" />
+			<Add option="$heap=0x0000" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=soft" />
+			<Add option="-std=c99" />
+			<Add option="-DSTM32F103C8" />
+			<Add option="-DSTM32F10X_MD" />
+			<Add option="-DUSE_STDPERIPH_DRIVER" />
+			<Add option="-fno-strict-aliasing" />
+			<Add directory=".\inc" />
+			<Add directory=".\src" />
+			<Add directory=".\CMSIS" />
+			<Add directory=".\SPL\inc" />
+			<Add directory=".\SPL\src" />
+		</Compiler>
+		<Linker>
+			<Add option="-eb_lib=n" />
+			<Add option="-eb_start_files" />
+		</Linker>
+		<Unit filename="CMSIS\core_cm3.h">
+			<Option virtualFolder="CMSIS\include\" />
+		</Unit>
+		<Unit filename="CMSIS\core_cmFunc.h">
+			<Option virtualFolder="CMSIS\include\" />
+		</Unit>
+		<Unit filename="CMSIS\core_cmInstr.h">
+			<Option virtualFolder="CMSIS\include\" />
+		</Unit>
+		<Unit filename="docs\doxyfile">
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="FreeRTOS\croutine.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\event_groups.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\heap_1.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\croutine.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\event_groups.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\FreeRTOS.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\list.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\mpu_wrappers.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\portable.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\projdefs.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\queue.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\semphr.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\StackMacros.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\task.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\include\timers.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\list.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\port.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\portmacro.h">
+			<Option virtualFolder="FreeRTOS\include\" />
+		</Unit>
+		<Unit filename="FreeRTOS\queue.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\tasks.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="FreeRTOS\timers.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="FreeRTOS\" />
+		</Unit>
+		<Unit filename="inc\FreeRTOSConfig.h">
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="inc\usr_bh1750.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_bmp180.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_error.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_fm24c04.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_font.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_global.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_ht16k33.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_i2c.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_interrupts.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_matrix_hal.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_messages.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_nmea_parser.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_rtc.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_si7021.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_tasks.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="inc\usr_time_utils.h">
+			<Option virtualFolder="usr\include\" />
+		</Unit>
+		<Unit filename="license.txt">
+			<Option virtualFolder="Information\" />
+		</Unit>
+		<Unit filename="readme.txt">
+			<Option virtualFolder="Information\" />
+		</Unit>
+		<Unit filename="SPL\inc\misc.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_adc.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_bkp.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_can.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_cec.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_crc.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_dac.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_dbgmcu.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_dma.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_exti.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_flash.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_fsmc.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_gpio.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_i2c.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_iwdg.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_pwr.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_rcc.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_rtc.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_sdio.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_spi.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_tim.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_usart.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\inc\stm32f10x_wwdg.h">
+			<Option virtualFolder="SPL\include\" />
+		</Unit>
+		<Unit filename="SPL\src\misc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_adc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_bkp.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_can.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_cec.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_crc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_dac.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_dbgmcu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_dma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_exti.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_flash.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_fsmc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_gpio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_i2c.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_iwdg.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_pwr.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_rcc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_rtc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_sdio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_spi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_tim.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_usart.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f10x_wwdg.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="SPL\" />
+		</Unit>
+		<Unit filename="SPL\startup_stm32f10x_md_vl.S">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="SPL\stm32f10x_conf.h">
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="SPL\system_stm32f10x.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="SPL\system_stm32f10x.h">
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_bh1750.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_bmp180.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_error.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_fm24c04.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_font.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_global.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_ht16k33.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_i2c.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_interrupts.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_matrix_hal.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_messages.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_nmea_parser.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_rtc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_si7021.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_tasks.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="src\usr_time_utils.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="usr\" />
+		</Unit>
+		<Unit filename="stm32f100c8_flash.ld">
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Unit filename="stm32f100c8_sram.ld">
+			<Option virtualFolder="startup_and_configs\" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Release" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+				<target_debugging_settings target="Debug" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</EmBitz_project_file>
