@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding='UTF-8'?>
+<CAMsetup>
+	<thisfile>D:\My\GPS_clock\PCB\gerber\preview.camset</thisfile>
+	<boardlayers>
+		<layer type="Silkscreen" H="35" Er="0.000">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-F_SilkS.gto</filename>
+			<filedisp>clock-F_SilkS.gto</filedisp>
+		</layer>
+		<layer type="PasteMask" H="35" Er="0.000">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-F_Paste.gtp</filename>
+			<filedisp>clock-F_Paste.gtp</filedisp>
+		</layer>
+		<layer type="SolderMask" H="35" Er="0.000">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-F_Mask.gts</filename>
+			<filedisp>clock-F_Mask.gts</filedisp>
+		</layer>
+		<layer type="Copper" H="35" Negative="DefaultPositive">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-F_Cu.gtl</filename>
+			<filedisp>clock-F_Cu.gtl</filedisp>
+		</layer>
+		<layer type="Prepreg" H="1600" Er="4.800">
+		</layer>
+		<layer type="Copper" H="35" Negative="DefaultPositive">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-B_Cu.gbl</filename>
+			<filedisp>clock-B_Cu.gbl</filedisp>
+		</layer>
+		<layer type="SolderMask" H="35" Er="0.000">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-B_Mask.gbs</filename>
+			<filedisp>clock-B_Mask.gbs</filedisp>
+		</layer>
+		<layer type="PasteMask" H="35" Er="0.000">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-B_Paste.gbp</filename>
+			<filedisp>clock-B_Paste.gbp</filedisp>
+		</layer>
+		<layer type="Silkscreen" H="35" Er="0.000">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-B_SilkS.gbo</filename>
+			<filedisp>clock-B_SilkS.gbo</filedisp>
+		</layer>
+		<layer type="BoardOutline" H="1880">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock-Edge_Cuts.gbr</filename>
+			<filedisp>clock-Edge_Cuts.gbr</filedisp>
+		</layer>
+	</boardlayers>
+
+	<boarddrillplates>
+		<drillplate from="top" to="btm" plated="yes">
+			<filename>D:\My\GPS_clock\PCB\gerber\clock.drl</filename>
+			<filedisp>clock.drl</filedisp>
+		</drillplate>
+	</boarddrillplates>
+
+	<ipc356>
+		<filename>D:\My\GPS_clock\PCB\gerber\clock.d356</filename>
+		<filedisp>clock.d356</filedisp>
+	</ipc356>
+
+	<GerberSetup Incremental='no' OmitTrailingZeros='no' Milimeters='no' Len1='2' Len2='3'/>
+	<NCDSetup Guess='yes' Incremental='no' OmitTrailingZeros='no' Milimeters='no' Len1='2' Len2='3'/>
+	<IPC356Setup AutoUnits='1' AutoMagnitude='1' LongPinID='yes' CpyFromDrill='yes'/>
+	<PosSaveRestoreTab>
+	</PosSaveRestoreTab>
+
+</CAMsetup>

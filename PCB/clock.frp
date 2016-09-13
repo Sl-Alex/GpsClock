@@ -1,0 +1,123 @@
+.HEA
+.TIM 14.01.2015 11:21:04
+.APP "Eeschema (2014-12-04 BZR 5312)-product"
+
+.ADD_COM     U1     "HT16K33-28"
+.ADD_COM     VD1     "DM88-300S"
+.ADD_COM     C1     "0.1"
+.ADD_COM     TP1     "TEST_PAD"
+.ADD_COM     TP2     "TEST_PAD"
+.ADD_COM     TP3     "TEST_PAD"
+.ADD_COM     TP4     "TEST_PAD"
+.ADD_COM     R4     "39k"
+.ADD_COM     R3     "39k"
+.ADD_COM     R5     "39k"
+.ADD_COM     VD2     "LL4148"
+.ADD_COM     VD3     "DM88-300S"
+.ADD_COM     A1     "SSF-1919P"
+
+
+.ADD_TER   VD3   4     "Net-(U1-Pad11)"
+.TER       U1   11
+
+.ADD_TER   VD3   6     "Net-(U1-Pad10)"
+.TER       U1   10
+
+.ADD_TER   VD1   8     "/COL0"
+.TER       VD2   1
+            U1   2
+            VD3   8
+
+.ADD_TER   VD1   7     "/COL1"
+.TER       U1   3
+            VD3   7
+
+.ADD_TER   VD1   5     "/COL7"
+.TER       VD3   5
+            U1   4
+
+.ADD_TER   U1   14     "Net-(U1-Pad14)"
+.TER       VD3   13
+
+.ADD_TER   VD1   15     "/ROW5"
+.TER       U1   19
+
+.ADD_TER   U1   18     "/ROW2"
+.TER       VD1   16
+
+.ADD_TER   VD3   10     "Net-(U1-Pad16)"
+.TER       U1   16
+
+.ADD_TER   VD3   9     "Net-(U1-Pad15)"
+.TER       U1   15
+
+.ADD_TER   VD3   15     "Net-(U1-Pad13)"
+.TER       U1   13
+
+.ADD_TER   U1   12     "Net-(U1-Pad12)"
+.TER       VD3   1
+
+.ADD_TER   VD3   16     "Net-(U1-Pad17)"
+.TER       U1   17
+
+.ADD_TER   VD1   12     "/COL3"
+.TER       VD3   11
+            U1   9
+
+.ADD_TER   U1   6     "/COL4"
+.TER       VD3   2
+            VD1   2
+
+.ADD_TER   VD3   3     "/COL2"
+.TER       VD1   3
+            U1   5
+
+.ADD_TER   U1   7     "/COL6"
+.TER       VD1   11
+            VD3   14
+
+.ADD_TER   U1   8     "/COL5"
+.TER       VD3   12
+            VD1   14
+
+.ADD_TER   VD1   6     "/ROW0"
+.TER       R5   1
+            U1   23
+
+.ADD_TER   VD1   9     "/ROW4"
+.TER       U1   22
+
+.ADD_TER   U1   21     "/ROW6"
+.TER       VD1   10
+
+.ADD_TER   U1   20     "/ROW7"
+.TER       VD1   13
+
+.ADD_TER   TP1   1     "/VCC"
+.TER       C1   2
+            U1   28
+
+.ADD_TER   VD1   4     "/ROW3"
+.TER       R3   1
+            U1   24
+
+.ADD_TER   R3   2     "Net-(R3-Pad2)"
+.TER       R5   2
+            VD2   2
+            R4   2
+
+.ADD_TER   TP3   1     "/SCL"
+.TER       U1   26
+
+.ADD_TER   TP4   1     "/SDA"
+.TER       U1   27
+
+.ADD_TER   R4   1     "/ROW1"
+.TER       U1   25
+            VD1   1
+
+.ADD_TER   U1   1     "DGND"
+.TER       C1   1
+            TP2   1
+
+.END

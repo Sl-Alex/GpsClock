@@ -1,0 +1,94 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 18.05.2015 15:53:38
+
+BeginCmp
+TimeStamp = /5559CAAA;
+Reference = C1;
+ValeurCmp = capacitor;
+IdModule  = discrete_SMD:0603_C;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559D571;
+Reference = C2;
+ValeurCmp = capacitor_el;
+IdModule  = discrete_SMD:case_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559AEA0;
+Reference = D1;
+ValeurCmp = diode;
+IdModule  = discrete_SMD:SOD-80;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B672;
+Reference = D2;
+ValeurCmp = DM88-300S;
+IdModule  = user_parts:DM88-300S;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B6AA;
+Reference = D3;
+ValeurCmp = DM88-300S;
+IdModule  = user_parts:DM88-300S;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B080;
+Reference = R1;
+ValeurCmp = resistor;
+IdModule  = discrete_SMD:0402_R;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B0D1;
+Reference = R2;
+ValeurCmp = resistor;
+IdModule  = discrete_SMD:0402_R;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B125;
+Reference = R3;
+ValeurCmp = resistor;
+IdModule  = discrete_SMD:0402_R;
+EndCmp
+
+BeginCmp
+TimeStamp = /53052BA2;
+Reference = U1;
+ValeurCmp = HT16K33-28;
+IdModule  = SO:SO28;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B63A;
+Reference = X1;
+ValeurCmp = VCC;
+IdModule  = CONNECTORS:PLS1_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B6A6;
+Reference = X2;
+ValeurCmp = GND;
+IdModule  = CONNECTORS:PLS1_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B703;
+Reference = X3;
+ValeurCmp = SCL;
+IdModule  = CONNECTORS:PLS1_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = /5559B743;
+Reference = X4;
+ValeurCmp = SDA;
+IdModule  = CONNECTORS:PLS1_SMD;
+EndCmp
+
+EndListe
