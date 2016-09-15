@@ -17,7 +17,7 @@ Following 3rd party HW was used:
 - FM24C04 FRAM chip.
 - EB-800 GPS module with 5V->3V converter.
 
-Module interconnections are available on the ([following diagram](./schematic.png)). The only PCB you have to make is a HT16K33 module (15 pcs). KiCAD project is in the ([PCB](./PCB)) folder.
+Module interconnections are available on [this](./schematic.png) diagram. The only PCB you have to make is a HT16K33 module (15 pcs). KiCAD project is in the [PCB](./PCB) folder.
 
 P.S. If 32kHz generation on the processor board is not stable, then it is highly recommended to make a proper crystal grounding.
 
