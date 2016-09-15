@@ -31,6 +31,7 @@
 /// @brief Days of week
 /// @details You should use your local one-byte encoding, the same as for @ref usr_font.c
 /// @warning Pay attention that week starts from Monday
+/*
 char msg_days[7][3] = {
     "Вс\0", ///< Sunday
     "Пн\0", ///< Monday
@@ -40,8 +41,8 @@ char msg_days[7][3] = {
     "Пт\0", ///< Friday
     "Сб\0"  ///< Saturday
 };
+*/
 
-/*
 char msg_days[7][3] = {
     "Su\0", ///< Sunday
     "Mo\0", ///< Monday
@@ -51,9 +52,8 @@ char msg_days[7][3] = {
     "Fr\0", ///< Friday
     "Sa\0"  ///< Saturday
 };
-*/
 
 /// @brief This message will be shown right after the start,
 /// indicating that GPS module is searching for satellites.
-char msg_search[] = "Поиск";
-//char msg_search[] = "Search";
+//char msg_search[] = "Поиск";
+char msg_search[] = "Search";
